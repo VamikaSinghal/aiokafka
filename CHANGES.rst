@@ -2,6 +2,19 @@
 Changelog
 =========
 
+0.16.0 (2026-??-??)
+===================
+
+Bugfixes:
+
+* Raise ``TypeError`` instead of ``AssertionError`` when ``getone()`` or
+  ``getmany()`` is given partitions that are not ``TopicPartition`` instances,
+  and ``IllegalStateError`` instead of ``AssertionError`` when ``seek_to_*()``
+  is called with no partitions assigned or ``highwater()``,
+  ``last_stable_offset()`` or ``last_poll_timestamp()`` is called with an
+  unassigned partition (issue #160)
+
+
 0.15.0 (2026-10-28)
 ===================
 
